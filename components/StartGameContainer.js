@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, StyleSheet, Text } from 'react-native';
+import { Button, Dimensions, StyleSheet, Text } from 'react-native';
 import BodyText from './BodyText';
 import Card from './Card';
 import MainButton from './MainButton';
@@ -19,7 +19,7 @@ const StartGameContainer = props => {
 
 const styles = StyleSheet.create({
     confirmContainer: {
-        marginTop: 20,
+        marginTop: Dimensions.get('window').width >600 ? 20 : 5,
         alignItems: 'center'
     },
 })

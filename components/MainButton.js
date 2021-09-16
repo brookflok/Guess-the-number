@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, Dimensions} from 'react-native'
 import Color from '../constants/Color';
 
 const MainButton = props => {
@@ -15,14 +15,14 @@ const MainButton = props => {
 const styles = StyleSheet.create({
     button:{
         backgroundColor: Color.primary,
-        paddingVertical: 12,
+        paddingVertical: Dimensions.get('window').width >600 ? 12:8,
         paddingHorizontal: 30,
-        borderRadius: 50
+        borderRadius: 30
     },
     buttonText:{
         color:'#fff',
         fontFamily: 'open-sans',
-        fontSize: 18,
+        fontSize: Dimensions.get('window').width >600 ? 18:14,
         textAlign:'center'
     }
 })
